@@ -1,0 +1,219 @@
+*{
+        box-sizing:border-box;
+    }
+    body{
+        padding:0;
+        margin:0;
+        line-height:1.5;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    /*Header*/
+    #header-id{
+        margin-top:0.5em;
+        text-align:right;
+    }
+    #header-id img{
+        border-radius:50%;
+        width:10em;
+        height:10em;
+    }
+    * {
+  box-sizing:border-box
+}
+h2 {
+  text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+/* áº¨n cÃ¡c slider */
+.mySlides {
+    display: none;
+}
+/* Ä�á»‹nh dáº¡ng ná»™i dung Caption */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+ 
+/* Ä‘á»‹nh dáº¡ng cÃ¡c cháº¥m chuyá»ƒn Ä‘á»•i cÃ¡c slide */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* khi Ä‘Æ°á»£c hover, active Ä‘á»•i mÃ u ná»�n */
+.active, .dot:hover {
+  background-color: #717171;
+}
+ 
+/* ThÃªm hiá»‡u á»©ng khi chuyá»ƒn Ä‘á»•i cÃ¡c slide */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+ 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    /**Main**/
+nav{
+    display:flex;
+    background-color:#1abc9c;
+}
+/*menu*/
+.menu{
+    flex:70%;
+    padding:0.6em;
+}
+nav a{
+    text-decoration:none;
+    color:white;
+    margin:1em;
+}
+nav a:hover:not(.active){
+    font-weight:bold;
+    color:#ffa366;
+}
+nav li:hover{
+    background-color:orange;
+}
+.active{
+    color:orange;
+    font-weight:bold;
+}
+
+/**content**
+    /*section 2*/
+    #section-2{
+        padding:1em;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-gap:1em;
+    }
+    .post{
+        text-align:center;
+        box-shadow:2px 3px 5px rgba(0,0,0,0.24);
+        border-radius:8px;
+        transition:0.4s;
+    }
+    .post:hover{
+        background:rgb(177, 171, 171);
+    }
+    .post img{
+        border-radius:8px 8px 0 0;
+        width:100%;
+        height:auto;
+    }
+    .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    /*Footer*/
+    #footer-id{
+        background:black;
+        color:white;
+        padding:1em;
+        text-align:center;
+        margin-top: 20px;
+    }
+    .pagination{
+    text-align:center;}
+
+    .contact-box{
+        background:#f0f0f0;
+        padding:1em;
+        margin-right:0.2em;
+        color:black;
+    }
+    .contact-box:hover{
+        background:darkgray;
+        color:white;
+    }
+    #footer-id a{
+        text-decoration:none;
+        font-weight:bold;
+        color:rgb(29, 101, 134);
+    }
+    #footer-id a:hover{
+        text-decoration:underline;
+    }
+product {  
+padding: 0px;   
+position: relative; 
+overflow: hidden;   
+height: 450px;  
+border: 1px solid #EAEAEA;  
+font-family: Arial, Helvetica, sans-serif;  
+font-size: 12px;
+}
+ 
+.product:hover .caption {   
+opacity: 1; 
+transform: translateY(-150px);  
+-webkit-transform:translateY(-150px);   
+-moz-transform:translateY(-150px);  
+-ms-transform:translateY(-150px);   
+-o-transform:translateY(-150px);
+}
+ 
+.product img {  
+z-index: 4;
+}
+ 
+.product .caption { 
+position: absolute; 
+top:400px;  
+-webkit-transition:all 0.3s ease-in-out;    
+-moz-transition:all 0.3s ease-in-out;   
+-o-transition:all 0.3s ease-in-out; 
+-ms-transition:all 0.3s ease-in-out;    
+transition:all 0.3s ease-in-out;    
+width: 100%;
+}
+ 
+.product .blur {    
+background-color: rgba(0, 0, 0, 0.7);   
+height: 300px;  
+z-index: 5; 
+position: absolute; 
+width: 100%;
+}
+.product .caption-text {    
+z-index: 10;    
+color: #fff;    
+position: absolute; 
+height: 300px;  
+text-align: center; 
+top:-20px;  
+width: 100%;
+}</style>

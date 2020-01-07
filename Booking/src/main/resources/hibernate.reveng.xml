@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="datvexemphim" match-name="hoadon"/>
+  <table-filter match-catalog="datvexemphim" match-name="khachhang"/>
+  <table-filter match-catalog="datvexemphim" match-name="lichchieu"/>
+  <table-filter match-catalog="datvexemphim" match-name="loaive"/>
+  <table-filter match-catalog="datvexemphim" match-name="phim"/>
+  <table-filter match-catalog="datvexemphim" match-name="phong"/>
+  <table-filter match-catalog="datvexemphim" match-name="suatchieu"/>
+  <table-filter match-catalog="datvexemphim" match-name="taikhoan"/>
+  <table-filter match-catalog="datvexemphim" match-name="ve"/>
+</hibernate-reverse-engineering>

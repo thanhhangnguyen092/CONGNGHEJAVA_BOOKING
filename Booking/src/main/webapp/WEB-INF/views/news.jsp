@@ -17,7 +17,7 @@
 <!-- Style CSS-->
 <link href="<c:url value="/resources/css/style.css"/>"
 	rel="stylesheet">
-    <title>News</title>
+    <title>Thong Tin Rap</title>
 </head>
  <nav>
     <div class="menu">

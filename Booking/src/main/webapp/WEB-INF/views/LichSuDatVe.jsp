@@ -17,7 +17,7 @@
 <!-- Style CSS-->
 <link href="<c:url value="/resources/css/style.css"/>"
 	rel="stylesheet">
-    <title>Trangchu</title>
+    <title>Lich Su Dat Ve</title>
 </head>
  <nav>
     <div class="menu">
@@ -91,7 +91,9 @@
         showSlides(slideIndex = n);
       }
     </script>
-   
+   <section id="services">
+	<div class="container-fluid" >
+		<div class="text-center" >
 	 <form>
 	 	<table border="1">
 	 		<tr>
@@ -124,27 +126,34 @@
 	 			</td>
 	 		</tr>
 	 		<tr>
-	 			<%-- <c:forEach items="${hoadon}" var="itemhoadon">
+	 		
+	 			<c:forEach items="${hoaDonKH}" var="itemhoadon">
 							<c:if test="${not empty itemhoadon}">
 								<tr>
-									<td>${khachhang.maKh}</td>
-									<td>${itemhoadon.maHd}</td>
-									<td>${phim.tenPhim}</td>
-									<td>${suatchieu.maPhong}</td>
-									<td>${itemhoadon.soluongve}</td>
-									<td>${itemhoadon.suatchieu}</td>
-									<td>${itemhoadon.thoigiandat}</td>
-									<td>${itemhoadon.vitringoi}</td>
+									<td>${itemhoadon.tenKH}</td>
+									<td>${itemhoadon.maHD}</td>
+									<td>${itemhoadon.tenPhim}</td>
+									<td>${itemhoadon.maPhong}</td>
+									<td>${itemhoadon.soLuongve}</td>
+									<td>${itemhoadon.suatChieu}</td>
+									<td>${itemhoadon.thoiGiandat}</td>
+									<td>${itemhoadon.viTri}</td>
 									<td>
 									<a href=""${pageContext.request.contextPath}/admin/see-list-categories.html?id=${itemCategory.categoryId}
 										class="btn btn-danger">Hủy vé</a>
 										</td>
 								</tr>
 							</c:if>
-						</c:forEach> --%>
+						</c:forEach>
 	 		</tr>
 	 	</table>
 	 </form>
+	 	</div>		
+	</div> 
+
+	
+
+</section>
     <footer id="footer-id" style="margin-top: 20px;">
         <div class="contact">
                 </div>

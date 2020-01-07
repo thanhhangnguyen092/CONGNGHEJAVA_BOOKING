@@ -1,4 +1,5 @@
 package dao;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -215,6 +216,19 @@ public class actionDAO implements connectDAO{
 		list = cr.list();
 		session.getTransaction().commit();
 		return list;
+	}
+
+
+	@Override
+	public List<Hoadon> layHoaDonTheoKhachHang(Khachhang kh) {
+		List<Hoadon> list =  this.layHD();
+		List<Hoadon> listHoaDonKH =  new ArrayList<Hoadon>();
+		for(Hoadon c :list) {
+			if(c.getKhachhang().getMaKh().toString().equals(kh.getMaKh().toString())){
+				listHoaDonKH.add(c);
+			}
+		}
+		return listHoaDonKH;
 	}
 
 

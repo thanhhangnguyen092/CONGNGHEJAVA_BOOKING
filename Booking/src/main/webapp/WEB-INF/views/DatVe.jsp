@@ -17,7 +17,7 @@
 <!-- Style CSS-->
 <link href="<c:url value="/resources/css/style.css"/>"
 	rel="stylesheet">
-    <title>Trangchu</title>
+    <title>Dat Ve</title>
 </head>
  <nav>
     <div class="menu">

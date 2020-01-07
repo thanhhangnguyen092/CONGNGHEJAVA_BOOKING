@@ -17,7 +17,7 @@
 <!-- Style CSS-->
 <link href="<c:url value="/resources/css/style.css"/>"
 	rel="stylesheet">
-    <title>Trangchu</title>
+    <title>Trang Chu</title>
 </head>
  <nav>
     <div class="menu">
@@ -116,32 +116,30 @@
     
 	<button type="submit" class="btn btn-primary">BOOKING</button>
   </form>
-
-
-<%-- 	<c:if test="${listPhim != null}" >
-		<c:forEach items="${listPhim}" var="itemPhim">
-			<tr>
-										<td><img alt="" src="<c:url value="/resources/image/${itemPhim.hinhanh}" />"/></td>
-									
-									</tr>
-		</c:forEach>
-	</c:if> --%>
-	<div style="  display:flex;flex-wrap:wrap;justify-content: center;">
+<section id="services">
+	<div class="container-fluid" >
+		<div class="text-center" >
+	<div style=" display:flex;flex-wrap:wrap;justify-content: center;">
 			<c:if test="${listPhim != null}">
 				<c:forEach items="${listPhim}" var="itemPhim">
-					<div style="width: 400px; height: 550px;float: left;margin:10px;" class="product">
+					<div style="width: 400px; height: 520px;float: left;margin:10px; " class="product">
 					 <a href="">
 						<img style="width: 380px; height: 430px;" src="<c:url value="/resources/image/${itemPhim.hinhanh}"/>"/>
 					</a>
-						<div> <a class="btn btn-danger" href="${pageContext.request.contextPath}/Showtimes?ma=${itemPhim.maPhim}">Xem lịch chiếu</a> 
-						<a class="btn btn-info" href="${pageContext.request.contextPath}/view-detail.html?maPhim=${itemPhim.maPhim}">Chi tiết</a> </div>
-						
+						<div style="margin-top: 10px"> <a class="btn btn-danger" href="${pageContext.request.contextPath}/Showtimes?ma=${itemPhim.maPhim}">Xem lịch chiếu</a> 
+						<a class="btn btn-info" href="${pageContext.request.contextPath}/view-detail.html?maPhim=${itemPhim.maPhim}">Chi tiết</a> 
+						</div>
 					</div>
-					
 				</c:forEach>
 			</c:if>
-			</div>
-			<div style="clear: left;"> </div>
+	</div>
+	<div style="clear: left;"> </div>
+	</div>		
+	</div> 
+
+	
+
+</section>
     <footer id="footer-id" style="margin-top: 20px;">
         <div class="contact">
                 </div>

@@ -20,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import dao.*;
 import entities.*;
+import model.*;
 
 @EnableWebMvc
 @Controller
@@ -44,20 +45,29 @@ public class MainController {
 	}
 	
 	@RequestMapping(value = "/Lichsudatve", method = RequestMethod.GET)
-	public String Lichsudatve(Model model) {
-		/*if (maKH == null) {
-			return "redirect:/home";
-		}
-		Hoadon hoaDon = new Hoadon();
-		Suatchieu suatChieu = connectDao.laySuatchieuMa(hoaDon.getSuatchieu().getMaSuat());
-		Hoadon hoadon = connectDao.layHDKH(maKH);
-		Khachhang khachhang = connectDao.layKhachhang(hoaDon.getKhachhang().getMaKh());
-		Phim phim = connectDao.getPhimByMa(hoaDon.getPhim().getMaPhim());
-		model.addAttribute("phim", phim);
-		model.addAttribute("hoadon", hoadon);
-		model.addAttribute("suatchieu", suatChieu);
-		model.addAttribute("khachhang", khachhang);*/
+	public String Lichsudatve(Model model, HttpSession session) {
+
+		if(session.getAttribute("email") != null) 
+		{
+			Khachhang kh = connectDao.layKhachhang(session.getAttribute("email").toString());
+			List<Hoadon> hd = connectDao.layHoaDonTheoKhachHang(kh);
+			
+			System.out.print(hd.size());
+			/*
+			 * List<hoaDon> hoadon = new ArrayList<hoaDon>(); for(Hoadon hdon : hd) { hoaDon
+			 * HD = new hoaDon(); HD.setSoLuongve(hdon.getSoluongve());
+			 * HD.setMaHD(hdon.getMaHd()); HD.setMaPhong(hdon.getPhong().getMaPhong());
+			 * HD.setSuatChieu(hdon.getSuatchieu().getGiobatdau() + "-"
+			 * +hdon.getSuatchieu().getGioketthuc());
+			 * HD.setTenKH(hdon.getKhachhang().getHotenKh());
+			 * HD.setTenPhim(hdon.getPhim().getTenPhim());
+			 * HD.setThoiGiandat(hdon.getThoigiandat()); HD.setViTri(hdon.getVitringoi());
+			 * hoadon.add(HD); } System.out.print(hoadon.size());
+			 * model.addAttribute("hoaDonKH", hoadon);
+			 */
 			return "LichSuDatVe";
+		}
+		return "redirect:/home";	
 		
 	}
 	
@@ -200,7 +210,7 @@ public class MainController {
 			hoaDon.setPhong(suatChieu.getPhong());
 			hoaDon.setVitringoi(viTri);
 			connectDao.Save(hoaDon);
-			return "LichSuDatVe";
+			return "DatVe";
 	}
 	
 }

@@ -17,7 +17,7 @@
 <!-- Style CSS-->
 <link href="<c:url value="/resources/css/style.css"/>"
 	rel="stylesheet">
-    <title>Lịch chiếu Phim</title>
+    <title>Lich Chieu Phim</title>
 </head>
  <nav>
     <div class="menu">

@@ -21,4 +21,5 @@ public interface connectDAO {
     public Phong layPhong(String MaSuat);
     public List<Phong> layPhong();
     public List<Lichchieu> layLichchieutheoPhim(String maPhim);
+    public List<Hoadon> layHoaDonTheoKhachHang(Khachhang kh);
 }
